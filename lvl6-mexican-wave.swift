@@ -1,4 +1,11 @@
 func wave(_ y: String) -> [String] {
+//  BEST PRACTICE:
+//  for i in y.indices {
+//    if !y[i].isWhitespace {
+//      wave.append(y[..<i] + y[i].uppercased() + y[y.index(after: i)...])
+//    }
+//  }
+
   var strings = [String]()
   for char in y {
     strings.append(char.isWhitespace ? "" : y)
